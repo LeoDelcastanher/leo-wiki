@@ -7,8 +7,11 @@ import {MtgCollection} from "../mtg-collection";
   styleUrls: ['./mtg.component.scss']
 })
 export class MtgComponent {
+
+  objectKeys = Object.keys;
   myCollection: { [key: string]: MtgCollection } = {
     'fun-with-fungus': {
+      code: 'fun-with-fungus',
       name: 'Fun With Fungus',
       set: 'tsp',
       wtfLink: 'https://mtg.wtf/deck/tsp/fun-with-fungus',
@@ -63,6 +66,7 @@ export class MtgComponent {
 				Se você tiver mais dúvidas ou precisar de mais detalhes sobre estratégias específicas, estou à disposição para ajudar!`
     },
     sunburst: {
+      code: 'sunburst',
       name: 'Sunburst',
       set: '5dn',
       wtfLink: 'https://mtg.wtf/deck/5dn/sunburst',

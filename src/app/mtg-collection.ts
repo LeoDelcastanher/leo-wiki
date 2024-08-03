@@ -1,4 +1,5 @@
 export interface MtgCollection {
+  code: string;
   name: string;
   set: string;
   wtfLink: string;

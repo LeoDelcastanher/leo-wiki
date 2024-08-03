@@ -1,1 +1,4 @@
-<p>mtg works!</p>
+<h1>My Decks:</h1>
+
+<deck *ngFor="let deckName of objectKeys(myCollection)"
+      [deck]="myCollection[deckName]"></deck>
