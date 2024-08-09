@@ -14,3 +14,13 @@ interface MissingCard {
   qtd: number;
   imgId: number;
 }
+
+export interface Expansion {
+  name: string;
+  date: string;
+  link: string;
+}
+
+export interface Expansions {
+  [key: string]: Expansion;
+}

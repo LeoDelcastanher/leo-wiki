@@ -1,5 +1,7 @@
 <div class="deck-section">
-  <h2>{{ deck.name }}</h2>
+  <h2>{{ deck.name }}<i class="ss" [ngClass]="'ss-'+deck.set"></i></h2>
+  <img *ngFor="let colorIcon of mtgColors"
+       [src]="colorIcon" style="width: 20px">
   <a target="_blank" [href]="deck.wtfLink">mtg.wtf</a>
-  <img [src]="mtgImgUrl + deck.set + '/' + deck.imgId + '.png'">
+  <img [src]="mtgImgUrl">
 </div>
