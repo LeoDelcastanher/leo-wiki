@@ -7,6 +7,7 @@ export interface MtgCollection {
   missingCards: MissingCard[];
   color: ('white' | 'green' | 'blue' | 'black' | 'red' | 'artifact')[];
   guide: string;
+  setInfo?: Expansion;
 }
 
 interface MissingCard {
@@ -17,6 +18,7 @@ interface MissingCard {
 
 export interface Expansion {
   name: string;
+  code: string;
   date: string;
   link: string;
 }

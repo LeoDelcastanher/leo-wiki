@@ -9,11 +9,13 @@ export class MtgService {
   private expansions: Expansions = {
     'tsp': {
       name: 'Time Spiral',
+      code: 'tsp',
       date: '2006-10-06',
       link: 'https://mtg.fandom.com/wiki/Time_Spiral'
     },
     '5dn': {
       name: 'Fifth Dawn',
+      code: '5dn',
       date: '2004-06-04',
       link: 'https://mtg.fandom.com/wiki/Fifth_Dawn'
     },
@@ -104,7 +106,10 @@ export class MtgService {
   getMyCollection() {
     let finalCollectionKeys = Object.keys(this.myCollection);
     return finalCollectionKeys.map(deckName => {
-      return this.myCollection[deckName];
+      return {
+        ...this.myCollection[deckName],
+        setInfo: this.expansions[this.myCollection[deckName].set]
+      };
     });
   }
 
